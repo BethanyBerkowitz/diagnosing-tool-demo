@@ -11,7 +11,7 @@ class DiagnosisFrequenciesController < ApplicationController
 
     def create
         DiagnosisFrequency.add(diagnosis_id: params[:diagnosis_id], symptom_id: params[:symptom_id])
-        render :created
+        head :created
     end
 
     def most_frequent_diagnosis
