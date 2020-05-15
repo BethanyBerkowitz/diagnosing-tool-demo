@@ -18,10 +18,10 @@ import axios from 'axios'
 export default {
   name: 'SymptomPicker',
   data() {
-      return {
-        options: [],
-        value: ''
-      }
+    return {
+      options: [],
+      value: ''
+    }
   }, 
   mounted () {
     axios
@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     onSelect(selected) {
-      console.log('SELECTED', selected)
+      this.$emit('symptom-selected', selected)
     }
   }
 }
