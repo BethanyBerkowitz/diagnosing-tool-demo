@@ -6,19 +6,16 @@ Install gems
 ```
 $ bundle install
 ```
-Run the server 
+Setup DB -- this should include seeding test data from `db/seeds.rb`
+```
+$ rake db:create
+$ rake db:setup
+```
+Run the server on port 3000
 ```
 $ rails s
 ```
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+Access the rails consols
+```
+$ rails c
+```
