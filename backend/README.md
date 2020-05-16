@@ -19,3 +19,10 @@ Access the rails consols
 ```
 $ rails c
 ```
+
+## Testing
+There are example tests in `tests/controllers/diagnosis_frequencies_controller_test.rb`. Testing still
+needs to be expanded across the application.
+```
+$ rails test
+```

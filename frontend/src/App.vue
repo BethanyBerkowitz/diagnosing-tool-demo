@@ -1,16 +1,20 @@
 <template>
   <div id="app">
     <SymptomPicker v-on:symptom-selected="onSymptomSelected"/>
+
     <div v-if="diagnosisGuess && !message">
       <h1>Maybe your diagnosis is: <span id="diagnosis">{{diagnosisGuess.description}}</span></h1>
       <el-button type="success" v-on:click="onDiagnosisConfirmed(diagnosisGuess.id)">Yes, that's it!</el-button>
       <el-button type="danger" v-on:click="onDiagnosisDenied">No way</el-button>
     </div>
+
     <h2 v-if="message">{{message}}</h2>
+
     <div v-if="showDiagnosisPicker">
       <DiagnosisPicker v-on:diagnosis-selected="onDiagnosisSelected"/>
       <el-button v-if="diagnosisSelected" type="success" v-on:click="onDiagnosisConfirmed(diagnosisSelected)">Submit</el-button>
     </div>
+
     <el-button v-on:click="reset">Start over</el-button>
   </div>
 </template>
@@ -30,6 +34,7 @@ export default {
   data() {
     return this.defaultData()
   },
+  
   methods: {
     defaultData() {
       return {
