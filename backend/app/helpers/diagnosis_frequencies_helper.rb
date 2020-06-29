@@ -1,0 +1,2 @@
+module DiagnosisFrequenciesHelper
+end
